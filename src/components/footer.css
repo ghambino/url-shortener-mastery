@@ -1,0 +1,75 @@
+.foot-describe {
+    background: hsl(257, 27%, 26%) url("../images/bg-boost-desktop.svg") no-repeat center;
+    width: 100%;
+    padding: 2rem;
+    text-align: center;
+    color: white;
+}
+.boost-title {
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+.boost-button {
+    background-color:  hsl(180, 66%, 49%);
+    color: white;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+/* ////// */
+
+.foot-container {
+    background-color: black;
+    color: white;
+    padding: 2rem 8rem;
+    display: flex;
+    justify-content: space-between;
+}
+.foot-image {
+    flex: 1;
+}
+.foot-itemBox {
+    flex: 2;
+    display: flex;
+    justify-content: space-between;
+}
+.inner-foot {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    font-size: 13px;
+    margin-top: 1rem;
+}
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+
+
+@media screen and (max-width: 375px) {
+    .boost-title {
+        font-size: 13px;
+        margin-bottom: 1rem;
+    }
+    .foot-container {
+        background-color: black;
+        color: white;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+    .foot-itemBox {
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+    .inner-foot {
+       align-items: center;
+    }
+}

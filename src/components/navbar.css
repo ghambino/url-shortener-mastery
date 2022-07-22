@@ -61,6 +61,7 @@ button.signup {
         display: initial;
     }
     nav {
+        margin: 1rem;
         padding: 1rem;
         justify-content: space-between;
         position: relative;

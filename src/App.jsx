@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import "./App.css";
 import introImg from "./images/illustration-working.svg";
 import brandImg from "./images/icon-brand-recognition.svg";
@@ -78,7 +79,7 @@ function App() {
   console.log(storageData);
 
   return (
-    <div className="container">
+    <div>
       <Navbar />
       <div className="intro-page">
         <div className="intro-left">
@@ -93,11 +94,11 @@ function App() {
           <img src={introImg} alt="intr" className="illustration" />
         </div>
       </div>
-      {/* //// */}
+    
       <div className="second-div">
         <div className="displaced">
           <div className="inputHolder">
-            <div>
+            <div className="plab">
               <input
                 type="text"
                 className={errorMessage ? "input error" : "input"}
@@ -175,6 +176,7 @@ function App() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
