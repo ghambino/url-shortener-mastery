@@ -113,7 +113,12 @@ function App() {
             <span style={{ color: "red" }}>{errorMessage}</span>
           </div>
           <div className="results">
-            {storageData.map((unit, index) => (
+            { storageData === null ? (
+              <div style={{marginTop: "1rem", color: "blueviolet"}}>
+                kindly input a url in the provided space
+              </div>
+            ) : 
+            storageData.map((unit, index) => (
               <div key={index} className="whitespace">
                 <span className="original">{unit.original_link}</span>
                 <div className="spaceright">
