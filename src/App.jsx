@@ -9,7 +9,8 @@ import detailImg from "./images/icon-detailed-records.svg";
 import customImg from "./images/icon-fully-customizable.svg";
 
 function App() {
-  const refHandler = useRef();
+  // const refHandler = useRef();
+  const [urlInput, setUrlInput] = useState("")
   const [copy, setCopy] = useState(false);
   const [storageData, setStorageData] = useState([]);
   const [shortened, setShortened] = useState(null);
@@ -21,7 +22,7 @@ function App() {
 
   const shorteningFunc = async (e) => {
     e.preventDefault();
-    let inputValue = refHandler.current.value;
+    let inputValue = urlInput;
     const baseUrl = "https://api.shrtco.de/v2/";
     // let resultHolder = storageData[0] === null ? [] : [...storageData];
 
@@ -50,7 +51,7 @@ function App() {
         console.error(error);
       }
 
-      refHandler.current.value = "";
+      setUrlInput("");
     }
   };
 
@@ -102,7 +103,8 @@ function App() {
               <input
                 type="text"
                 className={errorMessage ? "input error" : "input"}
-                ref={refHandler}
+                value={urlInput}
+                onChange={({target}) => setUrlInput(target.value)}
                 placeholder="Shorten a link here..."
                 // onChange={({ target }) => setInputVal(target.value)}
               />
