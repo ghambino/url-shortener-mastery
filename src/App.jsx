@@ -41,11 +41,13 @@ function App() {
         if (data && storageData !== null) {
           const hold = storageData.concat(data.result);
           window.localStorage.setItem("shotenUrl", JSON.stringify(hold));
+          setStorageData(hold)
         } else {
           window.localStorage.setItem(
             "shotenUrl",
             JSON.stringify([data.result])
           );
+          setStorageData([data.result])
         }
       } catch (error) {
         console.error(error);
